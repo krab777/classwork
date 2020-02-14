@@ -14,7 +14,9 @@
         },
         computed: {
             title() {
-                return this.$store.state.title
+                // return this.$store.state.title
+                return this.$store.getters.title
+
             }
         },
         created() {

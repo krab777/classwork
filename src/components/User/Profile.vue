@@ -14,9 +14,11 @@
             <profile-form :user="user" @save-user="saveUser($event)" @cancel="showForm = false"></profile-form>
         </div> -->
 
-        <div>{{ id }}</div>
+        <div><b>Id of user:</b> {{ id }}</div>
+        <!-- <div>Name of user {{ name }}</div> -->
+        <div><b>Email of user:</b> {{ email }}</div>
 
-        <h4><strong>{{ $route.query.friend }}</strong></h4>
+        <!-- <h4><strong>{{ $route.query.friend }}</strong></h4> -->
 
         <button @click="back" class="bg-blue-500">Back</button>
     </div>
@@ -48,6 +50,11 @@
             $route(to) {
                 this.$router.push('/user')
                 this.id = to.params['id']
+            }
+        },
+        computed: {
+            email() {
+                return this.$store.getters.getUserEmail(this.id)
             }
         }
     }

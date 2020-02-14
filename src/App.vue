@@ -4,9 +4,9 @@
 
         <router-link exact active-class="font-bold" to="/users">Users list</router-link>
 
-        <router-link active-class="font-bold" to="/users/1">Users1</router-link>
+        <router-link exact active-class="font-bold" to="/users/1">Users1</router-link>
 
-        <router-link active-class="font-bold" to="/users/2">Users2</router-link>
+        <router-link exact active-class="font-bold" to="/users/2">Users2</router-link>
 
         <router-view></router-view> 
     </div>
