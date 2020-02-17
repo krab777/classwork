@@ -3,6 +3,8 @@ import UsersList from './components/User/List'
 import Home from './components/Home'
 import UserProfile from './components/User/Profile'
 // import Component404 from './components/Support/component404'
+import ListEmployee from './components/Employee/List'
+// import ListUsers from './components/Employee/ListUsers'
 
 
 export default new VueRouter ({
@@ -27,6 +29,10 @@ export default new VueRouter ({
 			// 	}
 			// }
 		},
+		{
+			path: '/employees/',
+			component: ListEmployee
+		}
 		// {
 		// 	path: '*',
 		// 	component: component404

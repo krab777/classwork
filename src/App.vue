@@ -6,7 +6,7 @@
 
         <router-link exact active-class="font-bold" to="/users/1">Users1</router-link>
 
-        <router-link exact active-class="font-bold" to="/users/2">Users2</router-link>
+        <router-link exact active-class="font-bold" to="/employees">Employee</router-link>
 
         <router-view></router-view> 
     </div>
