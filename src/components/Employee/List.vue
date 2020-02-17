@@ -12,6 +12,7 @@
 
 <script>
     // import {mapState} from 'vuex'
+    import axios from 'axios'
     export default {
         name: "List",
         
@@ -25,23 +26,26 @@
         },
         methods: {
           getEpmloyer() {
-            this.$http.get('http://dummy.restapiexample.com/api/v1/employees')
-            .then(res => res.json())
-            .then(employees => {
-                /* eslint-disable no-console */ 
-                console.log(employees);
-                /* eslint-enable no-console */
-                this.employees = employees.data
-              })              
-          // axios
-          //   .get('http://dummy.restapiexample.com/api/v1/employees')
-          //   .then(res => 
-          //     (this.info = response)
-          //   );
+            // this.$http.get('http://dummy.restapiexample.com/api/v1/employees')
+            // .then(res => res.json())
+            // .then(employees => {
+            //      /*eslint-disable no-console*/  
+            //     console.log(employees);
+            //     /* eslint-enable no-console */
+            //     this.employees = employees.data
+            //   })              
+       
+            axios
+              .get('http://dummy.restapiexample.com/api/v1/employees')
 
+              .then(employees => {
+                this.employees = employees.data.data
+              })   
           },
+
+          
           crateEmployee() {
-            
+
           }
 
         },        

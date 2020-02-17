@@ -10,8 +10,8 @@ import axios from 'axios'
 Vue.config.productionTip = false
 
 Vue.use(VueRouter)
-// Vue.use(axios)
-Vue.prototype.$http = axios;
+Vue.use(axios)
+// Vue.prototype.$http = axios;
 
 
 // Filters
